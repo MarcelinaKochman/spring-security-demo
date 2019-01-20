@@ -1,10 +1,12 @@
 package com.agh.springsecuritydemo.dto;
 
+import com.agh.springsecuritydemo.validation.PasswordMatches;
 import com.agh.springsecuritydemo.validation.ValidEmail;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
+@PasswordMatches
 public class UserDto {
 
     @NotNull

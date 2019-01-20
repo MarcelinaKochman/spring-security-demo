@@ -1,5 +1,7 @@
 package com.agh.springsecuritydemo.dto;
 
+import com.agh.springsecuritydemo.validation.ValidEmail;
+
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
@@ -18,6 +20,7 @@ public class UserDto {
     private String password;
     private String matchingPassword;
 
+    @ValidEmail
     @NotNull
     @NotEmpty
     private String email;
